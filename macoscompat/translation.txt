@@ -1,0 +1,42 @@
+@ /usr/lib/libSystem.B.dylib -> libmacoscompat.so
+___stack_chk_guard -> system___stack_chk_guard
+_open -> darwin_open
+_sigaction -> darwin_sigaction
+_dlopen -> darwin_dlopen
+
+@ /usr/lib/libSystem.B.dylib -> libc.so.6
+_exit -> exit
+_memcpy -> memcpy
+___bzero -> __bzero
+___stdoutp -> stdout
+___stderrp -> stderr
+___stdinp -> stdin
+_realpath$DARWIN_EXTSN -> realpath
+
+# TODO:
+___error ->  __errno_location
+
+@ /usr/lib/libSystem.B.dylib -> libm.so.6
+___exp10f -> exp10f
+
+@ /usr/lib/libSystem.B.dylib -> libpthread.so.0
+
+@ /usr/lib/libc++.1.dylib -> libc++.so.1
+@ /usr/lib/libc++.1.dylib -> libstdc++.so.6
+
+@ /usr/lib/libiconv.2.dylib -> libiconv.so.2
+
+@ @rpath/QtHelp.framework/Versions/5/QtHelp -> libQt5Help.so.5
+@ @rpath/QtPrintSupport.framework/Versions/5/QtPrintSupport -> libQt5PrintSupport.so.5
+@ @rpath/QtWidgets.framework/Versions/5/QtWidgets -> libQt5Widgets.so.5
+@ @rpath/QtGui.framework/Versions/5/QtGui -> libQt5Gui.so.5
+@ @rpath/QtNetwork.framework/Versions/5/QtNetwork -> libQt5Network.so.5
+@ @rpath/QtSql.framework/Versions/5/QtSql -> libQt5Sql.so.5
+@ @rpath/QtCore.framework/Versions/5/QtCore -> libQt5Core.so.5
+
+@ @executable_path/libida64.dylib -> libida64.so
+@ @executable_path/libclpx.dylib -> libclpx.so
+
+@ /usr/lib/libobjc.A.dylib -> libmacoscompat.so
+@ /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation -> libmacoscompat.so
+@ /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit -> libmacoscompat.so
