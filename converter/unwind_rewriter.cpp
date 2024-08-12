@@ -190,7 +190,7 @@ void UnwindRewriter::convertFramelessEncoding(LIEF::MachO::Binary& bin, CompactU
     uint32_t stackSize = stackSizeEncoded * 8;
     if (indirectStackSize) {
         // stack size is encoded in subl $xxx,%esp instruction
-        auto content = bin.get_content_from_virtual_address(base + entry.functionOffset + stackSize, 4);
+        auto content = bin.get_content_from_virtual_address(base + entry.functionOffset + stackSizeEncoded, 4);
         if (content.size() != 4)
             throw std::runtime_error("Failed to get subl");
         auto subl = *(uint32_t*)content.data();
